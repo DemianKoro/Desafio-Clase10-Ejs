@@ -4,7 +4,8 @@ const routerProductos =  Router();
 const {getProductos, getProductoById, saveProducto, modifyProductoById, deleteProductoById,  } = require('../contenedores/contenedor');
 
 routerProductos.get('/', async (req, res) => {
-    res.json(`La lista de productos es: ${await getProductos().catch("No se pudo obtener la lista")}`);
+    const productos = await getProductos().catch()
+    res.json({"La lista de productos es:": productos});
 })
 
 //Acá tengo que validar si el Producto es no encontrado ↓
@@ -25,7 +26,7 @@ routerProductos.get('/:id', async (req, res) => {
 routerProductos.post('/guardar', async (req, res) => {
     const producto = req.body
     const productoNuevo = await saveProducto(producto).catch()
-    res.json({"Se guardo el producto": producto.name ,"con Id=": producto.id} )
+    res.json(`Se guardó el producto ${producto.name} con Id=${producto.id}`)
 })
 
 routerProductos.put('/:id', async (req, res) => {
