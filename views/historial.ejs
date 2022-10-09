@@ -1,0 +1,21 @@
+<h2 style="color:rgb(6, 6, 51);font-family: monospace">Libros ingresados</h2>
+<a name="productos"></a>
+<br>
+<% if(productos.length > 0){ %>
+    <div class="table-responsive">
+        <table class="table table-dark">
+            <tr style="color: rgb(131, 216, 114);"> <th>Nombre</th> <th>Precio</th> <th>Imagen</th> </tr>
+            <% for (const producto of productos) {%>
+            <tr>
+                <td><%=producto.name%></td>
+                <td>$ <%=producto.price%></td>
+                <td>
+                    <img src="<%=producto.image%>" style="width: 40px;"></img>
+                </td>
+            </tr>
+            <%};%>
+        </table>
+    </div>
+<% } else{ %>
+    <h3 class="alert alert-danger">no se encontraron datos</h1>
+<% } %>

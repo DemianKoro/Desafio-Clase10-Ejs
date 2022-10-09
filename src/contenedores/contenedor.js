@@ -86,5 +86,9 @@ const getProductoRandom = async (min,max)=>{
     return productoRandom;
 }
 
-module.exports = {Contenedor, getProductos, getProductoById, saveProducto, modifyProductoById, deleteProductoById };
+const deleteAllProducts = async () =>{
+    let listaVacia = contenedor.deleteAll()
+}
+
+module.exports = {Contenedor, getProductos, getProductoById, saveProducto, modifyProductoById, deleteProductoById, deleteAllProducts };
 

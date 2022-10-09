@@ -1,0 +1,23 @@
+<a name="ingreso"></a>
+<h1 style="color:rgb(6, 6, 51);font-family: monospace">Ingrese nuevo Libro</h1>
+<br>
+
+<form action="/productos" method="post">
+
+    <div class="form-group">
+        <label for="nombre"><b style="color:rgb(1, 1, 54);">Titulo</b></label>
+        <input id="nombre" class="form-control" value="Ej.Libro" type="text" name="name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="price"><b style="color:rgb(1, 1, 54);">Precio</b></label>
+        <input id="price" class="form-control" value="880" type="number" name="price" required>
+    </div>
+
+    <div class="form-group">
+        <label for="image"><b style="color:rgb(1, 1, 54);">Foto</b></label>
+        <input id="image" class="form-control" value="https://cdn3.iconfinder.com/data/icons/fantasy-and-role-play-game-adventure-quest/512/Spell_Book-512.png" type="url" name="image" required>
+    </div>
+
+    <button class="btn btn-success mt-3 mb-5">Enviar</button>
+</form>
