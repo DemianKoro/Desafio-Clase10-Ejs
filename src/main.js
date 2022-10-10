@@ -22,9 +22,14 @@ app.post('/productos', async (req, res) => {
     console.log(producto)
     const productos = await getProductos().catch();
     console.log(productos)
+    // res.render('historial', {productos})
     res.redirect('/')
-    // res.render('inicio', {productos});
 });
+
+// function renderIngreso() {
+//     let html = render('inicio', {productos});
+//     document.getElementById('ingresar').innerHTML = html;
+// }
 
 // app.delete('/'), async (req, res) => {
 //     params = (productos)
